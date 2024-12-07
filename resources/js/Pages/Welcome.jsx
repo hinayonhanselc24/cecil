@@ -56,12 +56,12 @@ export default function Welcome({queryParams = null}) {
             <div className="min-h-screen flex flex-col">
                 <div
                     className="flex-grow bg-cover bg-center"
-                    style={{ backgroundImage: 'url(/images/bgs.jpg)' }}
+                    style={{ backgroundImage: 'url(/images/cds.jpg)' }}
                 >
-                    <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+                    <div className="absolute inset-0 bg-black bg-opacity-20"></div>
                     <div className="relative z-10 p-4 flex justify-between mt-4 items-center text-white rounded-lg">
                         <div class="flex items-center">
-                        <img src="images/bg.jpg" alt="Sample Image" class="w-12 h-12 mr-4 ml-6 rounded-full"/>
+                        <img src="images/bg.jpg" alt="Sample Image" class="w-12 h-12 mr-4 ml-6 rounded-full cursor-pointer"/>
                         <p class="text-base">iWALKBYFAITH</p>
                         </div>
                         <div className="hidden sm:flex space-x-6 items-center">
@@ -78,8 +78,8 @@ export default function Welcome({queryParams = null}) {
                             className="text-sm md:text-base"
                             />
                         </div> */}
-                        <button className="hover:text-gray-300 cursor-pointer transition duration-200 text-sm md:text-base border rounded-lg px-4 py-2">Sign in</button>
-                        <button className="hover:text-gray-300 cursor-pointer transition duration-200 text-sm md:text-base border rounded-lg px-4 py-2">Sign up</button>
+                        <button className="cursor-pointer transition duration-200 text-sm md:text-base border rounded-lg px-4 py-2 hover:bg-green-400 hover:text-black">Sign in</button>
+                        <button className="cursor-pointer transition duration-200 text-sm md:text-base border rounded-lg px-4 py-2 hover:bg-green-400 hover:text-black">Sign up</button>
                         </div>
                         <div className="sm:hidden flex items-center">
                             <button onClick={toggleMenu} className="text-white">

@@ -4,14 +4,16 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\TaskController;
 use App\Http\Controllers\UserController;
-// use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-#change the web routes to be unique
-Route::redirect('/', '/welcome');
-Route::get('/welcome', fn() => Inertia::render('Welcome'))
-    ->name('welcome');
+Route::get('/', function () {
+    return Inertia::render('Website/Home');
+});
+Route::get('/contact-us', function () {
+    return Inertia::render('Website/Contacts');
+});
+
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/dashboard', fn() => Inertia::render('Dashboard'))
