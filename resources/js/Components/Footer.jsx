@@ -227,7 +227,7 @@ export default function Footer({children}) {
                                         </a>
                                     </div>
                                     <div className="group relative">
-                                        <a href="https://wa.me/639678336264" target="_blank">
+                                        <a href="https://wa.me/18185152927" target="_blank">
                                             <img
                                                 alt="iWALKBY WhatsApp"
                                                 loading="lazy"

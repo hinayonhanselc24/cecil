@@ -59,8 +59,8 @@ export default function Home({ auth }) {
             >
             <Head title="Home" />
             <NavBar />
-            <div className="relative w-full">
-                <div className="relative flex flex-col items-center justify-center text-black py-16 px-4">
+            <div className="relative w-full mb-[1in]">
+                <div className="relative flex flex-col items-center justify-center text-black">
                     <h1 className="text-4xl sm:text-6xl font-bold mt-8 mb-6 text-center">
                         Personal Car Service
                     </h1>
@@ -74,24 +74,24 @@ export default function Home({ auth }) {
                         onSubmit={(e) => {
                             e.preventDefault();
                         }}
-                        className="max-w-xl w-full bg-gray-500 bg-opacity-10 px-6 py-4 rounded-lg shadow-md mb-10 mt-6"
+                        className="max-w-xl w-full sm: bg-gray-500 bg-opacity-10 px-6 py-4 rounded-lg shadow-md mb-10 mt-6"
                     >
                         <div className="grid grid-cols-3 gap-4 mb-6">
                             <button
                                 type="button"
-                                className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5"
+                                className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-2.5"
                             >
                                 Distance
                             </button>
                             <button
                                 type="button"
-                                className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5"
+                                className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-2.5"
                             >
                                 Hourly
                             </button>
                             <button
                                 type="button"
-                                className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-5 py-2.5"
+                                className="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-sm px-3 py-2.5"
                             >
                                 Flat Rate
                             </button>

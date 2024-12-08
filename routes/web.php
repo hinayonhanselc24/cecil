@@ -13,6 +13,9 @@ Route::get('/', function () {
 Route::get('/contact-us', function () {
     return Inertia::render('Website/Contacts');
 });
+Route::get('/services', function () {
+    return Inertia::render('Website/Services');
+});
 
 
 Route::middleware(['auth', 'verified'])->group(function () {

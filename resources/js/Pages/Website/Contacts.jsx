@@ -1,17 +1,9 @@
 import WebsiteLayout from '@/Layouts/WebsiteLayout';
 import NavBar from '@/Components/NavBar';
-import TextAreaInput from '@/Components/TextAreaInput';
-import { useState } from 'react';
 import { Head, useForm } from '@inertiajs/react';
 import Footer from '@/Components/Footer';
 
 export default function Contacts({ auth }) {
-    const [isOpen, setIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setIsOpen(!isOpen);
-    };
-
     const { data, setData, post, processing, errors, reset } = useForm({
         image: '',
         name: '',
@@ -38,13 +30,13 @@ export default function Contacts({ auth }) {
             <NavBar />
             <div className="relative w-full mb-16">
                 <div className="flex flex-col items-center justify-center text-black py-8 px-4">
-                    <h1 className="text-2xl sm:text-4xl font-bold mb-4 text-center">
+                    <h1 className="text-2xl sm:text-6xl font-bold mb-4 text-center">
                         Contact Us
                     </h1>
                     <p className="text-sm sm:text-base text-center mb-6">
                         Any questions or remarks? Just write us a message!
                     </p>
-                    <div className="w-full max-w-4xl flex flex-col md:flex-row flex-wrap gap-4 justify-center">
+                    <div className="w-full max-w-4xl flex flex-col md:flex-row flex-wrap gap-4 justify-center mt-[1in]">
                         <div className="flex-1 border rounded-lg p-4 md:p-6 bg-green-100 shadow">
                             <h2 className="text-xl sm:text-2xl font-semibold mb-4">
                                 Contact Information
@@ -95,7 +87,7 @@ export default function Contacts({ auth }) {
                                         type="text"
                                         name="first_name"
                                         id="first_name"
-                                        className="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
+                                        className="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                                         placeholder=" "
                                         value={data.first_name}
                                         onChange={(e) => setData('first_name', e.target.value)}
@@ -114,7 +106,7 @@ export default function Contacts({ auth }) {
                                         type="text"
                                         name="last_name"
                                         id="last_name"
-                                        className="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
+                                        className="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                                         placeholder=" "
                                         value={data.last_name}
                                         onChange={(e) => setData('last_name', e.target.value)}
@@ -133,7 +125,7 @@ export default function Contacts({ auth }) {
                                         type="email"
                                         name="email"
                                         id="email"
-                                        className="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
+                                        className="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                                         placeholder=" "
                                         value={data.email}
                                         onChange={(e) => setData('email', e.target.value)}
@@ -152,7 +144,7 @@ export default function Contacts({ auth }) {
                                         type="phone_number"
                                         name="phone_number"
                                         id="phone_number"
-                                        className="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
+                                        className="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                                         placeholder=" "
                                         value={data.phone_number}
                                         onChange={(e) => setData('phone_number', e.target.value)}
@@ -171,7 +163,7 @@ export default function Contacts({ auth }) {
                                         type="subject"
                                         name="subject"
                                         id="subject"
-                                        className="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
+                                        className="block py-2 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                                         placeholder=" "
                                         value={data.subject}
                                         onChange={(e) => setData('subject', e.target.value)}
@@ -191,7 +183,7 @@ export default function Contacts({ auth }) {
                                 <textarea
                                     name="message"
                                     id="message"
-                                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
+                                    className="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-black dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-green-600 peer"
                                     placeholder=" "
                                     rows="4"
                                     value={data.message}
@@ -210,7 +202,7 @@ export default function Contacts({ auth }) {
                                 <button
                                     type="submit"
                                     disabled={processing}
-                                    className="bg-green-600 text-white px-6 py-3 flex justify-center items-center rounded-md text-xl disabled:opacity-50"
+                                    className="bg-green-600 text-white hover:text-black px-6 py-3 flex justify-center items-center rounded-md text-xl disabled:opacity-50"
                                 >
                                     Send Message
                                 </button>
