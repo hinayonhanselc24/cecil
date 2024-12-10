@@ -15,14 +15,15 @@ export default function NavBar() {
     return (
         <>
             <header className="relative z-10 p-4 flex justify-between items-center text-black">
-                <div className="flex items-center">
+                <Link href="/" className="flex items-center">
                     <img
                         src="images/ilogo.png"
                         alt="Logo"
                         className="w-12 h-12 mr-4 rounded-full cursor-pointer"
+                        
                     />
                     <p className="text-base font-sans font-bold">iWALKBYFAITH</p>
-                </div>
+                </Link>
                 <nav className="hidden sm:flex space-x-6 items-center">
                     <Link href="/" className="hover:text-black hover:bg-green-400 rounded py-2 px-4 text-sm md:text-base">
                         Home

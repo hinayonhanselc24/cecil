@@ -28,7 +28,7 @@ export default function Contacts({ auth }) {
         >
             <Head title="Contacts" />
             <NavBar />
-            <div className="relative w-full mb-16">
+            <div className="relative w-full mb-[1in]">
                 <div className="flex flex-col items-center justify-center text-black py-8 px-4">
                     <h1 className="text-2xl sm:text-6xl font-bold mb-4 text-center">
                         Contact Us
