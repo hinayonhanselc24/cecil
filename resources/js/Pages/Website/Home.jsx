@@ -142,12 +142,15 @@ export default function Home({ auth }) {
                                 />
                                 <InputError message={errors.no_pax} className="mt-2" />
                             </div>
-                            <button
-                                type="submit"
-                                className="text-white mt-4 text-xl px-4 justify-self-end rounded bg-green-400"
-                            >
-                                Search now
-                            </button>
+                            <div className="flex justify-center">
+                                <button
+                                    type="submit"
+                                    disabled={processing}
+                                    className="bg-green-600 text-white hover:text-black px-6 py-3 flex justify-center items-center rounded-md text-xl disabled:opacity-50"
+                                >
+                                    Search Now
+                                </button>
+                            </div>
                         </div>
                     </form>
                 </div>

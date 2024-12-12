@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Link } from "@inertiajs/react";
+import SignUpForm from "@/Components/SignUpForm";
 
 export default function NavBar() {
     const [isOpen, setIsOpen] = useState(false);
+    const [showSignUpForm, setShowSignUpForm] = useState(false);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -10,6 +12,11 @@ export default function NavBar() {
 
     const closeMenu = () => {
         setIsOpen(false);
+    };
+
+    const openSignUpForm = () => {
+        closeMenu();
+        setShowSignUpForm(true);
     };
 
     return (
@@ -20,7 +27,6 @@ export default function NavBar() {
                         src="images/ilogo.png"
                         alt="Logo"
                         className="w-12 h-12 mr-4 rounded-full cursor-pointer"
-                        
                     />
                     <p className="text-base font-sans font-bold">iWALKBYFAITH</p>
                 </Link>
@@ -40,7 +46,10 @@ export default function NavBar() {
                     <button className="border-black border rounded-lg px-4 py-2 hover:bg-green-400 hover:text-black">
                         Sign In
                     </button>
-                    <button className="border border-black rounded-lg px-4 py-2 hover:bg-green-400 hover:text-black">
+                    <button
+                        className="border border-black rounded-lg px-4 py-2 hover:bg-green-400 hover:text-black"
+                        onClick={openSignUpForm}
+                    >
                         Sign Up
                     </button>
                 </nav>
@@ -123,13 +132,39 @@ export default function NavBar() {
                             </button>
                             <button
                                 className="block w-full border-black border rounded-lg bg-green-400 shadow-lg shadow-green-500/50 px-4 py-2 mt-2 hover:bg-green-400 hover:text-black"
-                                onClick={closeMenu}
+                                onClick={openSignUpForm}
                             >
                                 Sign Up
                             </button>
                         </nav>
                     </div>
                 </div>
+            )}
+            {showSignUpForm && (
+                <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-10">
+                    <div className="bg-green-100 p-6 rounded-lg shadow-lg relative w-96 md:w-[1000px] sm:w-[500px] max-h-screen overflow-y-auto">
+                        <button
+                            onClick={() => setShowSignUpForm(false)}
+                            className="absolute top-4 right-4 px-4 py-2 rounded text-black hover:bg-green-400"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                className="w-6 h-6"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d="M6 18L18 6M6 6l12 12"
+                                />
+                            </svg>
+                        </button>
+                        <SignUpForm />
+                    </div>
+                </div>            
             )}
         </>
     );

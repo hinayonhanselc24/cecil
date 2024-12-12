@@ -16,6 +16,9 @@ Route::get('/contact-us', function () {
 Route::get('/services', function () {
     return Inertia::render('Website/Services');
 });
+Route::get('/collections', function () {
+    return Inertia::render('Website/Collections');
+});
 
 
 Route::middleware(['auth', 'verified'])->group(function () {
